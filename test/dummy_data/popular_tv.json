@@ -1,0 +1,21 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "backdrop_path": "/muth4OYamXf41G2evdrLEg8d3om.jpg",
+      "first_air_date": "2016-07-15",
+      "genre_ids": [18, 10765],
+      "id": 66732,
+      "name": "Stranger Things",
+      "origin_country": ["US"],
+      "original_name": "Stranger Things",
+      "overview": "When a young boy vanishes, a small town uncovers a mystery.",
+      "popularity": 280.123,
+      "poster_path": "/rweIrveL43TaxUN0akQEaAXL6x0.jpg",
+      "vote_average": 8.6,
+      "vote_count": 15234
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 1
+}
