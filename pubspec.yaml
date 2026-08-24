@@ -34,7 +34,7 @@ dependencies:
   get_it: ^7.7.0
   sqflite: ^2.3.3+1
   path_provider: ^2.1.4
-
+  flutter_lints: ^3.0.0
 dev_dependencies:
   mockito: ^5.0.8
   build_runner: ^2.0.4
