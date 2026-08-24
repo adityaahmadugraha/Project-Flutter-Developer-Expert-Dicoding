@@ -82,18 +82,20 @@ python check_coverage.py
 
 ---
 
-## 📁 Struktur Proyek (Clean Architecture)
-lib/
-├── common/ # constansts, utils, exception & failure
-├── data/ # models, datasources, repositories (Impl)
-├── domain/ # entities, repositories, usecases
-├── presentation/
-│ ├── bloc/ #  event, state, bloc
-│ ├── pages/ # halaman UI
-│ └── widgets/ # widget dapat digunakan 
-├── injection.dart # get_it
-└── main.dart
+## 📁 Struktur Proyek
 
+```
+lib/
+├── common/          # Konstanta, utilitas, penanganan exception & failure
+├── data/            # Models, data sources (remote & local), repository implementation
+├── domain/          # Entities, repository interfaces, use cases
+├── presentation/
+│   ├── bloc/        # BLoC (Event, State, Bloc) per fitur
+│   ├── pages/       # Halaman UI
+│   └── widgets/     # Widget yang dapat digunakan ulang
+├── injection.dart   # Dependency Injection (GetIt)
+└── main.dart
+```
 
 
 ---
