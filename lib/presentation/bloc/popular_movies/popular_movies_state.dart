@@ -1,0 +1,33 @@
+import 'package:ditonton/domain/entities/movie.dart';
+import 'package:equatable/equatable.dart';
+
+sealed class PopularMoviesState extends Equatable {
+  const PopularMoviesState();
+
+  @override
+  List<Object> get props => [];
+}
+
+class PopularMoviesEmpty extends PopularMoviesState {
+  const PopularMoviesEmpty();
+}
+
+class PopularMoviesLoading extends PopularMoviesState {
+  const PopularMoviesLoading();
+}
+
+class PopularMoviesError extends PopularMoviesState {
+  final String message;
+  const PopularMoviesError(this.message);
+
+  @override
+  List<Object> get props => [message];
+}
+
+class PopularMoviesHasData extends PopularMoviesState {
+  final List<Movie> result;
+  const PopularMoviesHasData(this.result);
+
+  @override
+  List<Object> get props => [result];
+}
