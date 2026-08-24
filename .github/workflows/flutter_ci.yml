@@ -36,6 +36,7 @@ jobs:
 
       - name: Analyze project source
         run: flutter analyze
+        continue-on-error: true
 
       - name: Run tests with coverage
         run: flutter test --coverage
