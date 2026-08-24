@@ -105,7 +105,7 @@ class _MovieHomeTab extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: .start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildSubHeading(
               title: 'Now Playing',
