@@ -1,5 +1,5 @@
-import 'package:tv_series/data/models/movie_model.dart';
-import 'package:tv_series/domain/entities/movie.dart';
+import 'package:movie/data/models/movie_model.dart';
+import 'package:movie/domain/entities/movie.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

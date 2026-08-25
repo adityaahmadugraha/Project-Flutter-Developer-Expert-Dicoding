@@ -8,8 +8,7 @@ import 'package:movie/presentation/bloc/top_rated_movies/top_rated_movies_state.
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-
-import '../../../../movie/test/dummy_data/dummy_objects.dart';
+import '../../../dummy_data/dummy_objects.dart';
 import 'top_rated_movies_bloc_test.mocks.dart';
 
 @GenerateMocks([GetTopRatedMovies])

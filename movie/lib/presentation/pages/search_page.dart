@@ -1,8 +1,9 @@
-import '../../../core/lib/common/constants.dart';
-import 'package:ditonton/presentation/bloc/movie_search/movie_search_bloc.dart';
-import 'package:ditonton/presentation/bloc/movie_search/movie_search_event.dart';
-import 'package:ditonton/presentation/bloc/movie_search/movie_search_state.dart';
-import 'package:ditonton/presentation/widgets/movie_card_list.dart';
+
+import 'package:core/common/constants.dart';
+import 'package:movie/presentation/bloc/movie_search/movie_search_bloc.dart';
+import 'package:movie/presentation/bloc/movie_search/movie_search_event.dart';
+import 'package:movie/presentation/bloc/movie_search/movie_search_state.dart';
+import 'package:movie/presentation/widgets/movie_card_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -36,7 +37,7 @@ class SearchPage extends StatelessWidget {
             SizedBox(height: 16),
             Text(
               'Search Result',
-              style: kHeading6,
+              style: heading6,
             ),
             BlocBuilder<MovieSearchBloc, MovieSearchState>(
               builder: (context, state) {

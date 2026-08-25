@@ -8,8 +8,7 @@ import 'package:movie/presentation/bloc/watchlist_movie/watchlist_movie_state.da
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-
-import '../../../../movie/test/dummy_data/dummy_objects.dart';
+import '../../../dummy_data/dummy_objects.dart';
 import 'watchlist_movie_bloc_test.mocks.dart';
 
 @GenerateMocks([GetWatchlistMovies])

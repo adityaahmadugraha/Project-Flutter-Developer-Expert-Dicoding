@@ -1,15 +1,15 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import '../../../core/lib/common/constants.dart';
-import 'package:ditonton/domain/entities/genre.dart';
-import 'package:ditonton/domain/entities/movie.dart';
-import '../../../movie/lib/domain/entities/movie_detail.dart';
-import 'package:ditonton/presentation/bloc/movie_detail/movie_detail_bloc.dart';
-import 'package:ditonton/presentation/bloc/movie_detail/movie_detail_event.dart';
-import 'package:ditonton/presentation/bloc/movie_detail/movie_detail_state.dart';
-import 'package:ditonton/common/state_enum.dart';
+import 'package:core/common/constants.dart';
+import 'package:core/domain/entities/genre.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:movie/domain/entities/movie.dart';
+import '../../domain/entities/movie_detail.dart';
+import 'package:movie/presentation/bloc/movie_detail/movie_detail_bloc.dart';
+import 'package:movie/presentation/bloc/movie_detail/movie_detail_event.dart';
+import 'package:movie/presentation/bloc/movie_detail/movie_detail_state.dart';
+import 'package:core/common/state_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class MovieDetailPage extends StatefulWidget {
   static const ROUTE_NAME = '/detail';
@@ -38,7 +38,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
     return Scaffold(
       body: BlocConsumer<MovieDetailBloc, MovieDetailState>(
         listenWhen: (previous, current) =>
-            previous.watchlistMessage != current.watchlistMessage &&
+        previous.watchlistMessage != current.watchlistMessage &&
             current.watchlistMessage.isNotEmpty,
         listener: (context, state) {
           final message = state.watchlistMessage;
@@ -104,7 +104,7 @@ class DetailContent extends StatelessWidget {
             builder: (context, scrollController) {
               return Container(
                 decoration: BoxDecoration(
-                  color: kRichBlack,
+                  color: richBlack,
                   borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
                 ),
                 padding: const EdgeInsets.only(
@@ -123,7 +123,7 @@ class DetailContent extends StatelessWidget {
                           children: [
                             Text(
                               movie.title,
-                              style: kHeading5,
+                              style: heading5,
                             ),
                             FilledButton(
                               onPressed: () {
@@ -160,7 +160,7 @@ class DetailContent extends StatelessWidget {
                                   itemCount: 5,
                                   itemBuilder: (context, index) => Icon(
                                     Icons.star,
-                                    color: kMikadoYellow,
+                                    color: mikadoYellow,
                                   ),
                                   itemSize: 24,
                                 ),
@@ -170,7 +170,7 @@ class DetailContent extends StatelessWidget {
                             SizedBox(height: 16),
                             Text(
                               'Overview',
-                              style: kHeading6,
+                              style: heading6,
                             ),
                             Text(
                               movie.overview,
@@ -178,7 +178,7 @@ class DetailContent extends StatelessWidget {
                             SizedBox(height: 16),
                             Text(
                               'Recommendations',
-                              style: kHeading6,
+                              style: heading6,
                             ),
                             MovieRecommendationsList(
                                 recommendations: recommendations),
@@ -204,7 +204,7 @@ class DetailContent extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: CircleAvatar(
-            backgroundColor: kRichBlack,
+            backgroundColor: richBlack,
             foregroundColor: Colors.white,
             child: IconButton(
               icon: Icon(Icons.arrow_back),

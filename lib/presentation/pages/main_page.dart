@@ -1,9 +1,8 @@
-import 'package:ditonton/presentation/pages/about_page.dart';
-import 'package:ditonton/presentation/pages/home_page.dart';
+import 'package:core/common/constants.dart';
 import 'package:ditonton/presentation/pages/watchlist_page.dart';
 import 'package:flutter/material.dart';
-
-import '../../common/constants.dart';
+import 'about_page.dart';
+import 'home_page.dart';
 
 class MainPage extends StatefulWidget {
   static const ROUTE_NAME = '/main';
@@ -31,13 +30,15 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: (index) => setState(() => _selectedIndex = index),
-        selectedItemColor: kMikadoYellow,
+        selectedItemColor: mikadoYellow,
         unselectedItemColor: Colors.white54,
         type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.bookmark), label: 'Watchlist'),
-          BottomNavigationBarItem(icon: Icon(Icons.info_outline), label: 'About'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.bookmark), label: 'Watchlist'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.info_outline), label: 'About'),
         ],
       ),
     );

@@ -1,8 +1,8 @@
-import 'package:ditonton/common/utils.dart';
-import 'package:ditonton/presentation/bloc/watchlist_movie/watchlist_movie_bloc.dart';
-import 'package:ditonton/presentation/bloc/watchlist_movie/watchlist_movie_event.dart';
-import 'package:ditonton/presentation/bloc/watchlist_movie/watchlist_movie_state.dart';
-import 'package:ditonton/presentation/widgets/movie_card_list.dart';
+import 'package:core/common/utils.dart';
+import 'package:movie/presentation/bloc/watchlist_movie/watchlist_movie_bloc.dart';
+import 'package:movie/presentation/bloc/watchlist_movie/watchlist_movie_event.dart';
+import 'package:movie/presentation/bloc/watchlist_movie/watchlist_movie_state.dart';
+import 'package:movie/presentation/widgets/movie_card_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
