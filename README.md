@@ -85,16 +85,38 @@ python check_coverage.py
 ## 📁 Struktur Proyek
 
 ```
-lib/
-├── common/          # Konstanta, utilitas, penanganan exception & failure
-├── data/            # Models, data sources (remote & local), repository implementation
-├── domain/          # Entities, repository interfaces, use cases
-├── presentation/
-│   ├── bloc/        # BLoC (Event, State, Bloc) per fitur
-│   ├── pages/       # Halaman UI
-│   └── widgets/     # Widget yang dapat digunakan ulang
-├── injection.dart   # Dependency Injection (GetIt)
-└── main.dart
+ditonton/
+├── core/                        # modul shared/generic
+│   └── lib/
+│       ├── common/              # constants, exception, failure, state_enum, ssl pinning client
+│       ├── domain/entities/     # genre
+│       ├── data/models/         # genre_model
+│       └── presentation/widgets/ # sub_heading
+│
+├── movie/                       # modul fitur movie (self-contained)
+│   └── lib/
+│       ├── domain/               # entities, repository interface, use cases
+│       ├── data/                 # models, data sources, movie_database_helper, repository impl
+│       └── presentation/
+│           ├── bloc/             # 7 bloc (list, detail, search, popular, top_rated, now_playing, watchlist)
+│           ├── pages/            # halaman UI movie
+│           └── widgets/          # movie_card, movie_list
+│
+├── tv_series/                   # modul fitur tv series (self-contained, mirror dari movie/)
+│   └── lib/
+│       ├── domain/
+│       ├── data/
+│       └── presentation/
+│           ├── bloc/             # 7 bloc
+│           ├── pages/
+│           └── widgets/
+│
+├── lib/                          # app utama (wiring & halaman gabungan)
+│   ├── presentation/pages/       # main_page, home_page, watchlist_page, about_page
+│   ├── injection.dart            # dependency injection (menggabungkan core + movie + tv_series)
+│   └── main.dart
+│
+└── pubspec.yaml                  # dependency ke core/movie/tv_series via path
 ```
 
 
