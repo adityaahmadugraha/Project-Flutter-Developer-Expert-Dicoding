@@ -42,5 +42,22 @@ jobs:
         run: flutter analyze
         continue-on-error: true
 
-      - name: Run tests with coverage
-        run: flutter test --coverage
+      - name: Run tests with coverage (core)
+        run: |
+          cd core
+          flutter pub get
+          flutter test --coverage
+
+      - name: Run tests with coverage (movie)
+        run: |
+          cd movie
+          flutter pub get
+          flutter pub run build_runner build --delete-conflicting-outputs
+          flutter test --coverage
+
+      - name: Run tests with coverage (tv_series)
+        run: |
+          cd tv_series
+          flutter pub get
+          flutter pub run build_runner build --delete-conflicting-outputs
+          flutter test --coverage
