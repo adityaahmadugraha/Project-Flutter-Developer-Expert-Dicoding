@@ -50,7 +50,7 @@ Aplikasi terintegrasi dengan **Firebase Analytics**
 
 **Screenshot Crashlytics:**
 
-![Firebase Crashlytics](assets/crashlytics.jpeg)
+![Firebase Crashlytics](assets/crahlytics.jpeg)
 
 ---
 
