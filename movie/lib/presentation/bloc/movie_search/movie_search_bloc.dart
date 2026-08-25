@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:ditonton/domain/usecases/search_movies.dart';
+import 'package:movie/domain/usecases/search_movies.dart';
 import 'package:stream_transform/stream_transform.dart';
 
 import 'movie_search_event.dart';

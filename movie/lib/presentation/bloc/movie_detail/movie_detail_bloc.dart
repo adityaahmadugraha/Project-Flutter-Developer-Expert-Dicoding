@@ -1,11 +1,10 @@
 import 'package:bloc/bloc.dart';
-import '../../../../movie/lib/domain/usecases/get_movie_detail.dart';
-import '../../../../movie/lib/domain/usecases/get_movie_recommendations.dart';
-import '../../../../movie/lib/domain/usecases/get_watchlist_status.dart';
-import '../../../../movie/lib/domain/usecases/remove_watchlist.dart';
-import '../../../../movie/lib/domain/usecases/save_watchlist.dart';
-import 'package:ditonton/common/state_enum.dart';
-
+import 'package:core/common/state_enum.dart';
+import '../../../domain/usecases/get_movie_detail.dart';
+import '../../../domain/usecases/get_movie_recommendations.dart';
+import '../../../domain/usecases/get_watchlist_status.dart';
+import '../../../domain/usecases/remove_watchlist.dart';
+import '../../../domain/usecases/save_watchlist.dart';
 import 'movie_detail_event.dart';
 import 'movie_detail_state.dart';
 

@@ -1,7 +1,8 @@
-import 'package:ditonton/domain/entities/movie.dart';
-import '../../../../movie/lib/domain/entities/movie_detail.dart';
-import 'package:ditonton/common/state_enum.dart';
+import 'package:movie/domain/entities/movie.dart';
+import 'package:core/common/state_enum.dart';
 import 'package:equatable/equatable.dart';
+
+import '../../../domain/entities/movie_detail.dart';
 
 class MovieDetailState extends Equatable {
   final RequestState movieState;

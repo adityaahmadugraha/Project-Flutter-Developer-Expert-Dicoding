@@ -1,23 +1,11 @@
-import 'package:ditonton/common/constants.dart';
-import 'package:ditonton/common/state_enum.dart';
-import 'package:ditonton/presentation/bloc/movie_list/movie_list_bloc.dart';
-import 'package:ditonton/presentation/bloc/movie_list/movie_list_event.dart';
-import 'package:ditonton/presentation/bloc/movie_list/movie_list_state.dart';
-import 'package:ditonton/presentation/bloc/tv_list/tv_list_bloc.dart';
-import 'package:ditonton/presentation/bloc/tv_list/tv_list_event.dart';
-import 'package:ditonton/presentation/bloc/tv_list/tv_list_state.dart';
-import 'package:ditonton/presentation/pages/now_playing_movies_page.dart';
-import 'package:ditonton/presentation/pages/now_playing_tv_page.dart';
-import 'package:ditonton/presentation/pages/popular_movies_page.dart';
-import 'package:ditonton/presentation/pages/popular_tv_page.dart';
-import 'package:ditonton/presentation/pages/search_page.dart';
-import 'package:ditonton/presentation/pages/search_tv_page.dart';
-import 'package:ditonton/presentation/pages/top_rated_movies_page.dart';
-import 'package:ditonton/presentation/pages/top_rated_tv_page.dart';
-import 'package:ditonton/presentation/widgets/media_list_widgets.dart';
-import 'package:ditonton/presentation/widgets/sub_heading.dart';
+import 'package:core/common/constants.dart';
+import 'package:core/common/state_enum.dart';
+import 'package:core/presentation/widgets/sub_heading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tv_series/tv_series.dart';
+import 'package:movie/movie.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -44,9 +32,9 @@ class _HomePageState extends State<HomePage>
         ..add(const FetchPopularMovies())
         ..add(const FetchTopRatedMovies());
       context.read<TvListBloc>()
-        ..add(const FetchNowPlayingTv())
-        ..add(const FetchPopularTv())
-        ..add(const FetchTopRatedTv());
+        ..add(const FetchTvListNowPlaying())
+        ..add(const FetchTvListPopular())
+        ..add(const FetchTvListTopRated());
     });
   }
 
@@ -81,11 +69,12 @@ class _HomePageState extends State<HomePage>
               controller: _tabController,
               dividerColor: Colors.transparent,
               indicator: BoxDecoration(
-                color: kMikadoYellow,
+                color: mikadoYellow,
                 borderRadius: BorderRadius.circular(24),
               ),
               indicatorSize: TabBarIndicatorSize.tab,
-              indicatorPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+              indicatorPadding:
+              const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
               labelColor: Colors.black,
               unselectedLabelColor: Colors.white70,
               labelStyle: TextStyle(fontWeight: FontWeight.w600),

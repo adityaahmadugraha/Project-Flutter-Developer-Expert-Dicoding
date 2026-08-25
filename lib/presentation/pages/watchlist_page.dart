@@ -1,16 +1,16 @@
-import 'package:ditonton/presentation/bloc/watchlist_movie/watchlist_movie_bloc.dart';
-import 'package:ditonton/presentation/bloc/watchlist_movie/watchlist_movie_event.dart';
-import 'package:ditonton/presentation/bloc/watchlist_movie/watchlist_movie_state.dart';
-import 'package:ditonton/presentation/bloc/watchlist_tv/watchlist_tv_bloc.dart';
-import 'package:ditonton/presentation/bloc/watchlist_tv/watchlist_tv_event.dart';
-import 'package:ditonton/presentation/bloc/watchlist_tv/watchlist_tv_state.dart';
-import 'package:ditonton/common/utils.dart';
-import 'package:ditonton/presentation/widgets/movie_card_list.dart';
-import 'package:ditonton/presentation/widgets/tv_card_list.dart';
+import 'package:core/common/constants.dart';
+import 'package:movie/presentation/bloc/watchlist_movie/watchlist_movie_bloc.dart';
+import 'package:movie/presentation/bloc/watchlist_movie/watchlist_movie_event.dart';
+import 'package:movie/presentation/bloc/watchlist_movie/watchlist_movie_state.dart';
+import 'package:core/common/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie/presentation/widgets/movie_card_list.dart';
+import 'package:tv_series/presentation/bloc/watchlist_tv/watchlist_tv_bloc.dart';
+import 'package:tv_series/presentation/bloc/watchlist_tv/watchlist_tv_event.dart';
+import 'package:tv_series/presentation/bloc/watchlist_tv/watchlist_tv_state.dart';
+import 'package:tv_series/presentation/widgets/tv_card_list.dart';
 
-import '../../common/constants.dart';
 
 class WatchlistPage extends StatefulWidget {
   @override
@@ -63,12 +63,12 @@ class _WatchlistPageState extends State<WatchlistPage>
               controller: _tabController,
               dividerColor: Colors.transparent,
               indicator: BoxDecoration(
-                color: kMikadoYellow,
+                color: mikadoYellow,
                 borderRadius: BorderRadius.circular(24),
               ),
               indicatorSize: TabBarIndicatorSize.tab,
               indicatorPadding:
-                  const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+              const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
               labelColor: Colors.black,
               unselectedLabelColor: Colors.white70,
               labelStyle: TextStyle(fontWeight: FontWeight.w600),

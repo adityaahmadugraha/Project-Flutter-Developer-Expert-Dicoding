@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
-import 'package:ditonton/domain/usecases/get_now_playing_movies.dart';
-import '../../../../movie/lib/domain/usecases/get_popular_movies.dart';
-import 'package:ditonton/domain/usecases/get_top_rated_movies.dart';
-import 'package:ditonton/common/state_enum.dart';
+import 'package:movie/domain/usecases/get_now_playing_movies.dart';
+import 'package:movie/domain/usecases/get_top_rated_movies.dart';
+import 'package:core/common/state_enum.dart';
 
+import '../../../domain/usecases/get_popular_movies.dart';
 import 'movie_list_event.dart';
 import 'movie_list_state.dart';
 

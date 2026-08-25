@@ -1,5 +1,7 @@
-import '../../../../movie/lib/domain/entities/movie_detail.dart';
+
 import 'package:equatable/equatable.dart';
+
+import '../../../domain/entities/movie_detail.dart';
 
 sealed class MovieDetailEvent extends Equatable {
   const MovieDetailEvent();

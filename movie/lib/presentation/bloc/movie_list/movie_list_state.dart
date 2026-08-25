@@ -1,5 +1,5 @@
-import 'package:ditonton/domain/entities/movie.dart';
-import 'package:ditonton/common/state_enum.dart';
+import 'package:movie/domain/entities/movie.dart';
+import 'package:core/common/state_enum.dart';
 import 'package:equatable/equatable.dart';
 
 class MovieListState extends Equatable {

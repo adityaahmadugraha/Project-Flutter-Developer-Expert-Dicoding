@@ -1,16 +1,15 @@
 import 'dart:convert';
 
 import 'package:movie/data/datasources/movie_remote_data_source.dart';
-import '../../../movie/lib/data/models/movie_detail_model.dart';
+import 'package:movie/data/models/movie_detail_model.dart';
 import 'package:movie/data/models/movie_response.dart';
 import 'package:core/common/exception.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
 
-import '../../../movie/test/json_reader.dart';
+import '../../json_reader.dart';
 import '../../helpers/test_helper.mocks.dart';
-
 void main() {
   const API_KEY = 'api_key=f189e97d44a042fb35e8e409f0dcfff3';
   const BASE_URL = 'https://api.themoviedb.org/3';

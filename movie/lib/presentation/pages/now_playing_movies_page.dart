@@ -1,8 +1,8 @@
-import 'package:ditonton/common/state_enum.dart';
-import 'package:ditonton/presentation/bloc/now_playing_movies/now_playing_movies_bloc.dart';
-import 'package:ditonton/presentation/bloc/now_playing_movies/now_playing_movies_event.dart';
-import 'package:ditonton/presentation/bloc/now_playing_movies/now_playing_movies_state.dart';
-import 'package:ditonton/presentation/widgets/movie_card_list.dart';
+import 'package:core/common/state_enum.dart';
+import 'package:movie/presentation/bloc/now_playing_movies/now_playing_movies_bloc.dart';
+import 'package:movie/presentation/bloc/now_playing_movies/now_playing_movies_event.dart';
+import 'package:movie/presentation/bloc/now_playing_movies/now_playing_movies_state.dart';
+import 'package:movie/presentation/widgets/movie_card_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

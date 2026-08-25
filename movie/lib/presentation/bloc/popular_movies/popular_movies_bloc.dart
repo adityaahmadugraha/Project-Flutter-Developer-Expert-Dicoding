@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
-import '../../../../movie/lib/domain/usecases/get_popular_movies.dart';
-
+import '../../../domain/usecases/get_popular_movies.dart';
 import 'popular_movies_event.dart';
 import 'popular_movies_state.dart';
 
